@@ -55,6 +55,51 @@ reload: //레이블은 콜론(:)으로 끝내고, 일반적으로 들여쓰기�
 구글링 결과 출처 : http://tcpschool.com/java/java_control_etc
 C언어나 C++과는 달리 자바에는 goto 문이 없다. 반복문을 가리키는 이름(label)은 break 문이나 continue 문에만 사용될 수 있다.
 갯수를 모르면 for 반복문이 아니라 while 반복문을 사용해야한다. 그리고 while 반복문사용시 무한루프로 빠질 수 있으므로 나가는 조건을 꼭 확인한다.
+import java.util.Scanner;
 
+public class Main1071 {
+    public static void main(String[] args) {
+        gogo(sc.nextInt());
+    }
+
+    static Scanner sc = new Scanner(System.in);
+
+    static void gogo(int a) { // 재귀함수
+        if (a != 0) {
+            System.out.println(a);
+            gogo(sc.nextInt());
+        }
+
+    }
+}
+시영님
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a;
+
+        do {
+            a = scan.nextInt();
+            if ( a != 0 ) System.out.println(a);
+        }
+        while ( a != 0 ) ;
+    }
+}
+찬빈님
+public static void main(String[] args){
+
+        Function();
+    }
+
+    public static void Function() {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        if (a != 0) {
+            System.out.println(a);
+            Function();
+        }
+    }희진
 
 */
